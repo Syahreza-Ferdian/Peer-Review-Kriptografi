@@ -1,0 +1,27 @@
+name: kripto-review
+
+services:
+  backend:
+    build: ./server
+    container_name: server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: iot-db
+    ports:
+      - "3307:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: iot_db
+      TZ: Asia/Jakarta
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./server/database.sql:/docker-entrypoint-initdb.d/database.sql
+
+volumes:
+  db_data:
