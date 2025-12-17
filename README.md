@@ -1,15 +1,15 @@
 # Review Project Akhir Kriptografi
+
 ## Kelompok 1
+
 - Syahreza Fisti Ferdian
 - Aksamala Citrayuh Anasita
 - Mirza Hilmi Shodiq
 
 Melakukan review pada **kelompok 3**
 
-## Dekripsi Repository
-Repository ini merupakan hasil **replikasi dan peer-to-peer review** terhadap project Kelompok 3 pada mata kuliah **Kriptografi**. Project ini mensimulasikan sistem **IoT ESP32** yang mengirimkan data sensor **HC-SR04** ke backend server melalui HTTP, dengan payload yang telah dienkripsi menggunakan algoritma **ASCON**, kemudian didekripsi di server dan disimpan ke database MySQL.
-
 ## Pendekatan Review
+
 Pada dokumentasi laporan kelompok 3, digunakan tools XAMPP dan Arduino IDE untuk proses pengembangan. Karena terdapat kendala teknis terkait XAMPP pada device reviewer, maka diputuskan untuk menggunakan pendekatan berikut untuk replikasi:
 
 - Firmware ESP32 di-build menggunakan **PlatformIO**
