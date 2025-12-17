@@ -126,13 +126,17 @@ Container yang dijalankan:
 
 ### 4.2 Akses Backend
 
-Endpoint utama:
+Dari endpoint:
 
 ```
-http://localhost:8000/submit.php
+http://<ip_host>:8000/submit.php
 ```
 
-Endpoint ini menerima POST request dari ESP32.
+IP host adalah IP Address device tempat menjalankan docker
+
+Endpoint ini menerima POST request dari ESP32. Jadi pada source code ESP32 harus disertakan URI endpoint tersebut pada baris `const char* serverUrl = "http://<ip_addr>:8000/submit.php";`.
+
+**Setelah melakukan perubahan, jangan lupa untuk build ulang firmware ESP32-nya. Dengan cara yang sama seperti pada section 3.3**
 
 ---
 
